@@ -207,6 +207,47 @@ body {
   cursor: pointer;
 }
 
+/* Footer */
+
+footer {
+  background-color: var(--primary);
+  margin-top: 3rem;
+  text-align: center;
+  padding: 1rem 0 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a{
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .social a:hover,
+footer .links a:hover {
+  color: var(--background);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  padding: 0.7rem 1rem;
+  color: #fff;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a{
+  color: var(--background);
+  font-weight: 700;
+}
+
 
 
 
