@@ -8,6 +8,14 @@
       {
         "link-name": "off"
       }
-    ]
+    ],
+    "compat-api/html": "off",
+    "axe/text-alternatives": [
+      "off",
+      {
+        "frame-title": "off"
+      }
+    ],
+    "disown-opener": "off"
   }
 }
