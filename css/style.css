@@ -42,3 +42,8 @@ body {
 .navbar .navbar-logo span{
   color: var(--primary);
 }
+
+.navbar .navbar-links{
+  display: flex;
+  align-items: center;
+}
