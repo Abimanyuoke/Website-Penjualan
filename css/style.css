@@ -52,6 +52,42 @@ body {
   align-items: center;
 }
 
+/* Navbar search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  height: 5rem;
+  width: 50rem;
+  align-items: center;
+  display: flex;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--background);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  color: var(--background);
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+
+
 /* Hero Section */
 .hero {
   min-height: 100vh;

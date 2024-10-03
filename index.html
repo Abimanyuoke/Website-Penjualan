@@ -20,6 +20,8 @@
     
   </head>
   <body>
+
+
     <!-- Navbar Start  -->
     <nav class="navbar">
       <a href="#" class="navbar-logo">kopi<span>kenangan</span>.</a>
@@ -31,12 +33,19 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="search-button"><i data-feather="search"></i></a>
         <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
-    </nav>
 
+      <!-- Search form start -->
+       <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box"><i data-feather="search"></i></label>
+       </div>
+      <!-- Search form end -->
+
+    </nav>
     <!-- Navbar end -->
 
     <!-- Hero Section start-->
@@ -104,7 +113,6 @@
             </div>
         </div>
      </section>
-
     <!-- Menu Section end -->
 
     <!-- Contact Section start-->
@@ -163,5 +171,12 @@
     <script>
       feather.replace();
     </script>
+
+    <!-- Js -->
+     <link rel="stylesheet" href="index.js">
+
+
+
+
   </body>
 </html>
