@@ -68,7 +68,7 @@ body {
   transition: 0.3s;
 }
 
-.navbar .search-form.active {
+.navbar .search-form .abim {
   transform: scaleY(1);
 }
 
