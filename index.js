@@ -6,7 +6,12 @@ document.querySelector('#hamburger-menu').onclick = () => {
     navbarNav.classList.toggle('active')
 }
 
-
+// Toogle class active untuk produk
+const shoppingCart = document.querySelector('.shoping-cart');
+document.querySelector('#shopping-cart-button').onclick = (e) => {
+    shoppingCart.classList.toggle('angga');
+    e.preventDefault();
+}
 
 // Toggle class active untuk search form
 const searchForm = document.querySelector('.search-form');
@@ -20,7 +25,8 @@ document.querySelector('#search-button').onclick = (e) => {
 
 // Klik di luar elemen
 const hamburger = document.querySelector('#hamburger-menu');
-const searchButton = document.querySelector('#search-button')
+const searchButton = document.querySelector('#search-button');
+const shoppingButton = document.querySelector('#shopping-cart-button');
 
 document.addEventListener('click', function(e) {
     if(hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
@@ -28,6 +34,10 @@ document.addEventListener('click', function(e) {
     }
 
     if(searchButton.contains(e.target) && !searchForm.contains(e.target)) {
-        searchForm.classList.remove('active');
+        searchForm.classList.remove('abim');
+    }
+
+    if(shoppingButton.contains(e.target) && !shoppingCart.contains(e.target)) {
+        shoppingCart.classList.remove('anggga');
     }
 })
