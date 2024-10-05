@@ -452,7 +452,7 @@ footer .credit a{
   position: relative;
   background-color: #fefefe;
   color: var(--background);
-  margin: 15% auto;
+  margin: 13% auto;
   padding: 1.2rem;
   border: 1px solid #666;
   width: 80%;
@@ -482,7 +482,7 @@ footer .credit a{
 }
 
 .modal-content img {
- height: 20rem;
+ height: 16rem;
  margin-right: 2rem;
  margin-bottom: 2rem; 
 }
@@ -560,6 +560,13 @@ footer .credit a{
 
   .modal-content {
     flex-wrap: wrap;
+  }
+
+  .modal-content img {
+    margin: auto;
+    height: 20rem;
+    border-radius: 10%;
+    margin-bottom: 2rem;
   }
 
 }
