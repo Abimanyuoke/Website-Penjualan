@@ -249,7 +249,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.menu p, .contact p {
+.menu p, .contact p, .products p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
