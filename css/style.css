@@ -225,6 +225,10 @@ body {
 .about .row .about-img img {
   width: 100%;
   padding: 0 1rem;
+  -webkit-mask-image: url('../img/overlay.svg');
+  -webkit-mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .about .row .content {
