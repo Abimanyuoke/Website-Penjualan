@@ -29,7 +29,7 @@
 
 
     <!-- Navbar Start  -->
-    <nav class="navbar">
+    <nav class="navbar" x-data>
       <a href="#" class="navbar-logo">kopi<span>kenangan</span>.</a>
       <div class="navbar-nav">
         <a href="#home" class="nav-link">Home</a>
@@ -41,7 +41,9 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show ="$store.cart.quantity" x-text = "$store.cart.quantity"></span>
+        </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -118,32 +120,32 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quisquam corrupti doloremque magni. Dolorum, inventore?</p>
         <div class="row">
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
             <div class="menu-card">
-                <img src="img/1.png" alt="Latte" class="menu-card-img">
+                <img src="img/img.png" alt="Latte" class="menu-card-img">
                 <h3 class="menu-card-title">- Latte -</h3>
                 <p class="menu-card-price">IDR 20K</p>
             </div>
@@ -160,7 +162,7 @@
                 <template x-for ="(item, index) in items" x-key="index">
                     <div class="product-card">
                         <div class="product-icons">
-                            <a href="#">
+                            <a href="#" @click.prevent="$store.cart.add(item)">
                                 <svg
                                     width="24"
                                     height="24"

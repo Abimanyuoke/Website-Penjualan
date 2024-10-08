@@ -8,6 +8,18 @@ document.addEventListener('alpine:init', () => {
             { id : 5, name : 'Sumatra Mandheling', img: '5.png', price: 40000 },
         ]
     }))
+
+
+    Alpine.store('cart', {
+        items: [],
+        total: 0,
+        quantity: 0,
+        add(newItem) {
+            this.items.push(newItem);
+            this.quantity++;
+            this.total += newItems.price;
+        }
+    })
 })
 
 // konversi rupiah

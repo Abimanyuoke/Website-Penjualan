@@ -88,6 +88,21 @@ body {
 }
 
 /* Shopping cart */
+
+#shopping-cart-button {
+  position: relative;
+}
+
+#shopping-cart-button .quantity-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
 .shoping-cart {
   position: absolute;
   top: 100%;
