@@ -16,6 +16,23 @@
         "frame-title": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-mask-image",
+          "-webkit-mask-repeat",
+          "-webkit-mask-position",
+          "-webkit-mask-size"
+        ]
+      }
+    ]
   }
 }
