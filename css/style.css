@@ -55,8 +55,6 @@ body {
   margin: 0 1rem;
 }
 
-/* hehe */
-
 .navbar .navbar-nav a:hover {
   color: var(--primary);
 }
@@ -77,6 +75,38 @@ body {
 .navbar .navbar-extra a{
   color: #fff;
   margin: 0 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hambuger-menu{
+  display: none;
+}
+
+/* media query */
+@media (min-width : 1366px){
+  html{
+    font-size: 75%;
+  }
+}
+
+/* Laptop */
+
+
+/* Tablet */
+@media (min-width : 768px){
+  html{
+    font-size: 62.5%;
+  }
+}
+
+/* handphone */
+@media (min-width : 1366px){
+  html{
+    font-size: 55%;
+  }
 }
 
 /* Navbar search form */
