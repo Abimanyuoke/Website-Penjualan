@@ -86,13 +86,13 @@ body {
 }
 
 /* media query */
+
+/* Laptop */
 @media (min-width : 1366px){
   html{
     font-size: 75%;
   }
 }
-
-/* Laptop */
 
 
 /* Tablet */
@@ -103,7 +103,7 @@ body {
 }
 
 /* handphone */
-@media (min-width : 1366px){
+@media (min-width : 450px){
   html{
     font-size: 55%;
   }
