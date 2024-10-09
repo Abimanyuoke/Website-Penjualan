@@ -77,6 +77,58 @@ body {
   margin: 0 0 0.5rem;
 }
 
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hambuger-menu{
+  display: none;
+}
+
+/* media query */
+
+/* Laptop */
+@media (min-width : 1366px){
+  html{
+    font-size: 75%;
+  }
+}
+
+
+/* Tablet */
+@media (min-width : 768px){
+  html{
+    font-size: 62.5%;
+  }
+
+  #hambuger-menu{
+    display: inline-block;
+
+  }
+
+  .navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    
+
+  }
+
+  .navbar .navbar-nav.active{
+    right: 0;
+  }
+}
+
+/* handphone */
+@media (min-width : 450px){
+  html{
+    font-size: 55%;
+  }
+}
+
 /* Navbar search form */
 .search-form {
   position: absolute;
@@ -584,7 +636,7 @@ footer .credit a{
   }
 
   .contact .row .map {
-    height: 30rem;
+    height: 30rem; 
   }
 
   .contact .row form {
