@@ -116,6 +116,10 @@ body {
     
 
   }
+
+  .navbar .navbar-nav.active{
+    right: 0;
+  }
 }
 
 /* handphone */
