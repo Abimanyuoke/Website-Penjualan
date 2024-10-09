@@ -100,6 +100,22 @@ body {
   html{
     font-size: 62.5%;
   }
+
+  #hambuger-menu{
+    display: inline-block;
+
+  }
+
+  .navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    
+
+  }
 }
 
 /* handphone */
@@ -616,7 +632,7 @@ footer .credit a{
   }
 
   .contact .row .map {
-    height: 30rem;
+    height: 30rem; 
   }
 
   .contact .row form {
