@@ -72,7 +72,7 @@ body {
   transform: scaleX(0.5);
 }
 
-.navbar .navbar-extra a{
+.navbar .navbar-extra a {
   color: #fff;
   margin: 0 0 0.5rem;
 }
@@ -81,50 +81,46 @@ body {
   color: var(--primary);
 }
 
-#hambuger-menu{
+#hamburger-menu {
   display: none;
 }
 
 /* media query */
 
 /* Laptop */
-@media (min-width : 1366px){
-  html{
+@media (min-width: 1366px) {
+  html {
     font-size: 75%;
   }
 }
 
-
 /* Tablet */
-@media (min-width : 768px){
-  html{
+@media (min-width: 768px) {
+  html {
     font-size: 62.5%;
   }
 
-  #hambuger-menu{
+  #hamburger-menu {
     display: inline-block;
-
   }
 
-  .navbar .navbar-nav{
+  .navbar .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
     width: 30rem;
     height: 100vh;
-    
-
   }
 
-  .navbar .navbar-nav.active{
+  .navbar .navbar-nav.active {
     right: 0;
   }
 }
 
 /* handphone */
-@media (min-width : 450px){
-  html{
+@media (min-width: 450px) {
+  html {
     font-size: 55%;
   }
 }
@@ -213,8 +209,6 @@ body {
 .shoping-cart .remove-item:hover {
   color: var(--primary);
 }
-
-
 
 /* Hero Section */
 .hero {
@@ -309,7 +303,7 @@ body {
 .about .row .about-img img {
   width: 100%;
   padding: 0 1rem;
-  -webkit-mask-image: url('../img/overlay.svg');
+  -webkit-mask-image: url("../img/overlay.svg");
   -webkit-mask-size: 80%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -338,7 +332,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.menu p, .contact p, .products p {
+.menu p,
+.contact p,
+.products p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -495,7 +491,7 @@ footer .social {
   padding: 1rem 0;
 }
 
-footer .social a{
+footer .social a {
   color: #fff;
   margin: 1rem;
 }
@@ -517,8 +513,7 @@ footer .credit {
   font-size: 0.8rem;
 }
 
-
-footer .credit a{
+footer .credit a {
   color: var(--background);
   font-weight: 700;
 }
@@ -572,9 +567,9 @@ footer .credit a{
 }
 
 .modal-content img {
- height: 16rem;
- margin-right: 2rem;
- margin-bottom: 2rem; 
+  height: 16rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .modal-content p {
@@ -592,9 +587,6 @@ footer .credit a{
   margin-top: 1rem;
   padding: 1rem 1.6rem;
 }
-
-
-
 
 /* Media Query */
 
@@ -636,7 +628,7 @@ footer .credit a{
   }
 
   .contact .row .map {
-    height: 30rem; 
+    height: 30rem;
   }
 
   .contact .row form {
@@ -658,5 +650,4 @@ footer .credit a{
     border-radius: 10%;
     margin-bottom: 2rem;
   }
-
 }
