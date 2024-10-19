@@ -37,14 +37,14 @@ body {
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
+.navbar .navbar-logo{
+  font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
   font-style: italic;
 }
 
-.navbar .navbar-logo span {
+.navbar .navbar-logo span{
   color: var(--primary);
 }
 
@@ -72,7 +72,7 @@ body {
   transform: scaleX(0.5);
 }
 
-.navbar .navbar-extra a {
+.navbar .navbar-extra a{
   color: #fff;
   margin: 0 0 0.5rem;
 }
@@ -81,46 +81,50 @@ body {
   color: var(--primary);
 }
 
-#hamburger-menu {
+#hambuger-menu{
   display: none;
 }
 
 /* media query */
 
 /* Laptop */
-@media (min-width: 1366px) {
-  html {
+@media (min-width : 1366px){
+  html{
     font-size: 75%;
   }
 }
 
+
 /* Tablet */
-@media (min-width: 768px) {
-  html {
+@media (min-width : 768px){
+  html{
     font-size: 62.5%;
   }
 
-  #hamburger-menu {
+  #hambuger-menu{
     display: inline-block;
+
   }
 
-  .navbar .navbar-nav {
+  .navbar .navbar-nav{
     position: absolute;
     top: 100%;
     right: -100%;
     background-color: #fff;
     width: 30rem;
     height: 100vh;
+    
+
   }
 
-  .navbar .navbar-nav.active {
+  .navbar .navbar-nav.active{
     right: 0;
   }
 }
 
 /* handphone */
-@media (min-width: 450px) {
-  html {
+@media (min-width : 450px){
+  html{
     font-size: 55%;
   }
 }
@@ -160,6 +164,21 @@ body {
 }
 
 /* Shopping cart */
+
+#shopping-cart-button {
+  position: relative;
+}
+
+#shopping-cart-button .quantity-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
 .shoping-cart {
   position: absolute;
   top: 100%;
@@ -215,7 +234,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/content.jpg");
+  background-image: url('../img/content.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -223,16 +242,12 @@ body {
 }
 
 .hero::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 100%;
   height: 20%;
-  background: linear-gradient(
-    0deg,
-    rgba(1, 1, 3, 1) 8%,
-    rgba(255, 255, 255, 0) 50%
-  );
+  background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255, 255, 255, 0) 50%);
   bottom: 0;
 }
 
@@ -244,7 +259,7 @@ body {
 .hero .content h1 {
   font-size: 5em;
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0, 5);
+  text-shadow: 1px 1px 3px rgba(1,1,3,0,5);
   line-height: 1.2;
 }
 
@@ -257,7 +272,7 @@ body {
   margin-top: 1rem;
   line-height: 1.4;
   font-weight: 100;
-  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0, 5);
+  text-shadow: 1px 1px 3px rgba(1,1,3,0,5);
   mix-blend-mode: difference;
 }
 
@@ -269,26 +284,21 @@ body {
   font-size: 1.4rem;
   background-color: var(--primary);
   border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
 }
 
 /* About Section */
-.about,
-.menu,
-.contact {
+.about, .menu, .contact, .products{
   padding: 8rem 7% 1.4rem;
 }
-.about h2,
-.menu h2,
-.contact h2 {
+
+.about h2, .menu h2, .contact h2, .products h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.menu h2 span,
-.contact h2 span {
+.about h2 span, .menu h2 span, .contact h2 span, .products h2 span{
   color: var(--primary);
 }
 
@@ -303,7 +313,7 @@ body {
 .about .row .about-img img {
   width: 100%;
   padding: 0 1rem;
-  -webkit-mask-image: url("../img/overlay.svg");
+  -webkit-mask-image: url('../img/overlay.svg');
   -webkit-mask-size: 80%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -327,8 +337,7 @@ body {
 }
 
 /* Menu */
-.menu h2,
-.contact h2 {
+.menu h2, .contact h2 {
   margin-bottom: 1rem;
 }
 
@@ -427,12 +436,6 @@ body {
   font-weight: bold;
 }
 
-.products .product-price span {
-  text-decoration: line-through;
-  font-weight: lighter;
-  font-size: 1rem;
-}
-
 /* Contack Section */
 .contact .row {
   display: flex;
@@ -458,7 +461,7 @@ body {
   margin-top: 2rem;
   background-color: var(--background);
   border: 1px solid #eee;
-  padding-left: 2rem;
+  padding-left: 2rem;  
 }
 
 .contact .row form .input-group input {
@@ -513,7 +516,8 @@ footer .credit {
   font-size: 0.8rem;
 }
 
-footer .credit a {
+
+footer .credit a{
   color: var(--background);
   font-weight: 700;
 }
