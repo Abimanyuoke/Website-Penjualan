@@ -2,6 +2,6 @@
 const navbarNav = document.querySelector(".navbar-nav");
 
 // ketika hamburger menu di click
-document.querySelector("#hambuger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };

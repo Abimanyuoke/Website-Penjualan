@@ -51,7 +51,7 @@ body {
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 1rem;
 }
 
@@ -72,10 +72,18 @@ body {
   transform: scaleX(0.5);
 }
 
-
 .navbar .navbar-links{
   display: flex;
   align-items: center;
+}
+
+.navbar .navbar-extra a{
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
 }
 
 .navbar .navbar-extra a {
@@ -191,8 +199,6 @@ body {
   color: var(--primary);
 }
 
-
-
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -203,7 +209,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
- 
 }
 
 .hero::after {
@@ -278,6 +283,10 @@ body {
 .about .row .about-img img {
   width: 100%;
   padding: 0 1rem;
+  -webkit-mask-image: url('../img/overlay.svg');
+  -webkit-mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 .about .row .content {
@@ -302,7 +311,9 @@ body {
   margin-bottom: 1rem;
 }
 
-.menu p, .contact p, .products p {
+.menu p,
+.contact p,
+.products p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -453,7 +464,7 @@ footer .social {
   padding: 1rem 0;
 }
 
-footer .social a{
+footer .social a {
   color: #fff;
   margin: 1rem;
 }
@@ -474,6 +485,7 @@ footer .links a {
 footer .credit {
   font-size: 0.8rem;
 }
+
 
 footer .credit a{
   color: var(--background);
@@ -529,9 +541,9 @@ footer .credit a{
 }
 
 .modal-content img {
- height: 16rem;
- margin-right: 2rem;
- margin-bottom: 2rem; 
+  height: 16rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .modal-content p {
@@ -549,9 +561,6 @@ footer .credit a{
   margin-top: 1rem;
   padding: 1rem 1.6rem;
 }
-
-
-
 
 /* Media Query */
 
@@ -658,7 +667,6 @@ footer .credit a{
     border-radius: 10%;
     margin-bottom: 2rem;
   }
-
 }
 
 /* Mobile Phone */
