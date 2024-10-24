@@ -13,20 +13,22 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+>>>>>>> main
     <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
 
     <!-- Css -->
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Alpine js -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- App -->
+     <script src="src/app.js"></script>
+
   </head>
   <body>
     <!-- Navbar Start  -->
-    <nav class="navbar">
+    <nav class="navbar" x-data>
       <a href="#" class="navbar-logo">kopi<span>kenangan</span>.</a>
       <div class="navbar-nav">
         <a href="#home" class="nav-link">Home</a>
@@ -38,7 +40,9 @@
 
       <div class="navbar-extra">
         <a href="#" id="search-button"><i data-feather="search"></i></a>
-        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i>
+        <span class="quantity-badge" x-show ="$store.cart.quantity" x-text = "$store.cart.quantity"></span>
+        </a>
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
 
@@ -161,104 +165,55 @@
     <!-- Menu Section end -->
 
     <!-- Produk section start -->
-    <section class="products" id="products">
-      <h2><span>Produk Unggulan</span> Kami</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima hic
-        unde illum accusamus eaque magnam.
-      </p>
+     <section class="products" id="products" x-data="products">
+        <h2><span>Produk Unggulan</span> Kami</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima hic unde illum accusamus eaque magnam.</p>
 
-      <div class="row">
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="img/produk_1.png" alt="product-1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="img/produk_1.png" alt="product-1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="img/produk_1.png" alt="product-1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="img/produk_1.png" alt="product-1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffe Beans 1</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
-            </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="row">
+                <template x-for ="(item, index) in items" x-key="index">
+                    <div class="product-card">
+                        <div class="product-icons">
+                            <a href="#" @click.prevent="$store.cart.add(item)">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                        <use href="img/feather-sprite.svg#shopping-cart" />
+                                </svg>
+                            </a>
+                            <a href="#" class="item-detail-button">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                        <use href="img/feather-sprite.svg#eye" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="product-image">
+                            <img :src="`img/products/${item.img}`" :alt="item.name">
+                        </div>
+                    <div class="product-content">
+                        <h3 x-text="item.name"></h3>
+                        <div class="product-stars">
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star" class="star-full"></i>
+                            <i data-feather="star"></i>
+                            <i data-feather="star"></i>
+                        </div>
+                        <div class="product-price"><span x-text = "rupiah(item.price)"></span></div>
+                    </div>
+                </div>
+            </template>
     <!-- Produk section end -->
 
     <!-- Contact Section start-->
