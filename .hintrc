@@ -33,6 +33,7 @@
           "-webkit-mask-size"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
