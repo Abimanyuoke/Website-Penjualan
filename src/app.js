@@ -48,7 +48,8 @@ document.addEventListener('alpine:init', () => {
             if (cartItem.quantity > 1) {
                 // telusuri 1
                 this.items = this.items.map((item) => {
-                    if (item.id != newItem.id) {
+                    // jika bukan barang yang diklik
+                    if (item.id != id) {
                         return item;
                     } else {
                         // jika barang sudah ada, tambah quantyty dan total 
@@ -61,7 +62,7 @@ document.addEventListener('alpine:init', () => {
                 })
             } else if (cartItem.quantity === 1) {
                 // jika barang sisa 1
-                this.items = this.items.filter((item) => item.id != id);
+                this.items = this.items.filter((item) => item.id !== id);
                 this.quantity--;
                 this.total -= cartItem.price;
                 return item;
