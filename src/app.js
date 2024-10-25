@@ -6,6 +6,7 @@ document.addEventListener('alpine:init', () => {
             { id : 3, name : 'Primo Passo', img: '3.png', price: 30000 },
             { id : 4, name : 'Aceh Gayo', img: '4.png', price: 35000 },
             { id : 5, name : 'Sumatra Mandheling', img: '5.png', price: 40000 },
+            { id : 6, name : 'Taro Coffe', img: '6.png', price: 45000 },
         ]
     }))
 
