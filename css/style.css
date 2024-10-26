@@ -787,7 +787,9 @@ footer .credit a{
     width: 200px;
 }
 
-
+.hero .content h1 {
+  font-size: 4rem;
+}
 
 
  
@@ -799,4 +801,13 @@ footer .credit a{
   html {
    font-size: 55%;
   }
+
+  .hero .content h1 {
+    font-size: 2.6rem;   
+  }
+
+  .hero .content p {
+    font-size: 1.1rem;
+  }
+
 }
