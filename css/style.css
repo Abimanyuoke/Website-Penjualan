@@ -775,13 +775,13 @@ footer .credit a{
 }
 
 /* Mobile Phone */
-@media (max-width: 450px) {
+@media (max-width: 300px) {
   html {
    font-size: 55%;
   }
 
   .hero .content h1 {
-    font-size: 2.6rem;   
+    font-size: 2rem;   
   }
 
   .hero .content p {
