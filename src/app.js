@@ -72,6 +72,24 @@ document.addEventListener('alpine:init', () => {
     })
 })
 
+// form validation 
+const checkoutButton = document.querySelector('.checkout-button');
+const form = document.querySelector('#checkout-form');
+checkoutButton.disabled = true;
+
+form.addEventListener('keyup', () => {
+    for (let j = 0; j < form; j++) {
+        if ( form.elements[j].length !== 0 ) {
+            checkoutButton.classList.remove('disabled')   
+            checkoutButton.classList.add('disabled');    
+        } else {
+            return false;
+        }
+    }
+    checkoutButton.disabled = false;
+    checkoutButton.classList.remove('disabled')
+});
+
 // konversi rupiah
 
 const rupiah = (number) => {
@@ -80,4 +98,29 @@ const rupiah = (number) => {
         currency: 'IDR',
         minimumFractionDigits : 0,
     }).format(number);
+}
+
+
+// kirim data ketika tombol checkout dikirim
+checkoutButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = new URLSearchParams(formData);
+    const objData = Object.fromEntries(data);
+    const massage  = formatMassage(objData);
+    window.open('http://wa.me/6282257313006?text=' + encodeURIComponent(massage));
+})
+
+
+// format pesan whatsapp
+const formatMassage = (obj) => {
+    return `Data Customer
+    Nama: ${obj.name}
+    Email: ${obj.email}
+    No Hp: ${obj.phone}
+    Nama: ${obj.nama}
+    Data Pesanan
+    ${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
+    TOTAL: ${rupiah(obj.total)}
+    Terima Kasih.`;
 }

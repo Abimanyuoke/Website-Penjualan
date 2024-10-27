@@ -40,13 +40,6 @@ itemDetailButtons.forEach((btn) => {
 })
 
 
-// klik tombol close modal
-document.querySelector('.modal .close-icon').onclick = (e) => {
-    itemDetailModal.style.display = 'none';
-    e.preventDefault();
-}
-
-
 // Klik di luar elemen
 const hamburger = document.querySelector('#hamburger-menu');
 const searchButton = document.querySelector('#search-button');
